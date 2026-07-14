@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Heitor Nunes | Desenvolvedor</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="blur roxo"></div>
+    <div class="blur verde"></div>
+
+    <header>
+
+        <div class="logo">
+
+            <div class="logo-circle">HN</div>
+
+            <span>Heitor Nunes</span>
+
+        </div>
+
+        <nav>
+
+            <a href="#projetos">Projetos</a>
+            <a href="#skills">Skills</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+
+        </nav>
+
+    </header>
+
+    <section class="hero">
+
+        <div class="hero-esquerda">
+
+            <p class="tag">/ desenvolvedor iniciante</p>
+
+            <h1>
+
+                Criando projetos e transformando ideias em código.
+
+            </h1>
+
+            <p class="descricao">
+
+                Estudando programação e desenvolvendo projetos com HTML,
+                CSS e JavaScript.
+
+            </p>
+
+            <a href="#projetos" class="botao">
+
+                Ver projetos
+
+            </a>
+
+        </div>
+
+        <div class="hero-direita">
+
+            <div class="card-principal">
+
+                <h2>Stack principal</h2>
+
+                <p>HTML5</p>
+                <p>CSS3</p>
+                <p>JavaScript</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projetos">
+
+        <p class="tag">/ projetos</p>
+
+        <h2>Projetos em destaque</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>🧮 Calculadora</h3>
+
+                <p>
+
+                    Calculadora desenvolvida em HTML, CSS e JavaScript.
+
+                </p>
+
+                <a href="https://calculadorahnjs.netlify.app/">
+
+                    Abrir projeto →
+
+                </a>
+
+            </div>
+
+            <div class="card">
+
+                <h3>🎮 Jogo de adivinhação</h3>
+
+                <p>
+
+                    Tente acertar o número secreto.
+
+                </p>
+
+                <input
+                    type="number"
+                    id="palpite"
+                    placeholder="Digite um número">
+
+                <button onclick="adivinhar()">
+
+                    Tentar
+
+                </button>
+
+                <p id="mensagem"></p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <p class="tag">/ skills</p>
+
+        <h2>Stack e ferramentas</h2>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <h3>Desenvolvimento</h3>
+
+                <ul>
+
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsividade</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Ferramentas</h3>
+
+                <ul>
+
+                    <li>VS Code</li>
+                    <li>GitHub</li>
+                    <li>Git</li>
+                    <li>Figma</li>
+
+                </ul>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Interesses</h3>
+
+                <ul>
+
+                    <li>Web Design</li>
+                    <li>Front-End</li>
+                    <li>Games</li>
+                    <li>Tecnologia</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="sobre">
+
+        <p class="tag">/ sobre</p>
+
+        <h2>Quem sou eu</h2>
+
+        <p class="sobre-texto">
+
+            Sou um desenvolvedor iniciante apaixonado por tecnologia e
+            programação. Atualmente estudo HTML, CSS e JavaScript,
+            criando projetos para aprimorar minhas habilidades.
+
+            Gosto de transformar ideias em sites e aplicações
+            funcionais, sempre buscando evoluir e aprender novas
+            tecnologias.
+
+        </p>
+
+    </section>
+
+    <section id="contato">
+
+        <p class="tag">/ contato</p>
+
+        <h2>Vamos conversar?</h2>
+
+        <p class="descricao">
+
+            Entre em contato comigo através dos links abaixo.
+
+        </p>
+
+        <div class="contato-grid">
+
+            <a href="mailto:heitorndev@gmail.com">
+
+                <span>E-mail</span>
+
+                <strong>heitorndev@gmail.com</strong>
+
+            </a>
+
+            <a href="https://github.com/ybaianob7" target="_blank">
+
+                <span>GitHub</span>
+
+                <strong>ybaianob7</strong>
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <div class="logo-footer">
+
+            HN
+
+        </div>
+
+        <p>
+
+            © 2026 Heitor Nunes
+
+        </p>
+
+    </footer>
+
+
+
+    <div class="matrix-bg"></div>
+
+<script>
+
+    const matrix = document.querySelector(".matrix-bg");
+
+    const simbolos = [
+        "</>",
+        "{ }",
+        "HTML",
+        "CSS",
+        "JS",
+        "const",
+        "let",
+        "function()",
+        "<div>",
+        "if",
+        "for",
+        "=>"
+    ];
+
+    function criarCodigo() {
+
+        const codigo = document.createElement("span");
+
+        codigo.innerText =
+            simbolos[
+                Math.floor(
+                    Math.random() * simbolos.length
+                )
+            ];
+
+        codigo.style.left =
+            Math.random() * 100 + "vw";
+
+        codigo.style.animationDuration =
+            Math.random() * 8 + 6 + "s";
+
+        codigo.style.fontSize =
+            Math.random() * 12 + 12 + "px";
+
+        matrix.appendChild(codigo);
+
+        setTimeout(() => {
+
+            codigo.remove();
+
+        }, 14000);
+
+    }
+
+    setInterval(criarCodigo, 350);
+
+</script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
